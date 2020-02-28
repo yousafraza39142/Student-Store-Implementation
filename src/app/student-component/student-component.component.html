@@ -1,0 +1,22 @@
+
+<div class="row">
+    <div class="col-sm-12">
+      <hr>
+      <div class="card">
+          <div class="card-header">Student-List</div>
+          <div class="card-body">
+            <ul class="list-group">
+                <a
+                  class="list-group-item bg-dark text-light border-light text-center mb-1 border-2"
+                  style="cursor: pointer"
+                  *ngFor="let student of (students | async).students; let i = index"
+                  (click)="onEditItem(i)"
+                >
+                Name:{{student.name}} RollNo:{{student.rollNo}}
+                </a>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  
